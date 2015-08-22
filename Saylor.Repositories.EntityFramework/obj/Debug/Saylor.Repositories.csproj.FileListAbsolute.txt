@@ -1,0 +1,12 @@
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\bin\Debug\Saylor.Repositories.dll.config
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\bin\Debug\Saylor.Repositories.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\bin\Debug\Saylor.Repositories.pdb
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\bin\Debug\EntityFramework.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\bin\Debug\Saylor.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\bin\Debug\Saylor.pdb
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\bin\Debug\EntityFramework.xml
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\obj\Debug\Saylor.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\obj\Debug\Saylor.Repositories.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor.Repositories.EntityFramework\obj\Debug\Saylor.Repositories.pdb

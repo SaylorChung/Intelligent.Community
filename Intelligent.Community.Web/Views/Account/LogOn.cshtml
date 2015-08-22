@@ -1,0 +1,160 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="~/css/login.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery/jquery-1.11.3.min.js"></script>
+    <script src="~/Scripts/jquery-md5/jquery.md5.js"></script>
+    <title>路政基础信息管理系统--登陆</title>
+    <style type="text/css">
+        input::-webkit-input-placeholder {
+            color: #b0a7a7 !important;
+            font-size: 14px;
+            font-family: 'Microsoft YaHei';
+        }
+        input:-moz-placeholder {
+            color: #D6D0CA !important;
+            font-size: 14px;
+            font-family: 'Microsoft YaHei';
+        }
+        input::-moz-placeholder {
+            color: #D6D0CA !important;
+            font-size: 14px;
+            font-family: 'Microsoft YaHei';
+        }
+        input:-ms-input-placeholder {
+            color: #D6D0CA !important;
+            font-size: 14px;
+            font-family: 'Microsoft YaHei';
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+            $("body").keydown(function () {
+                if (event.keyCode == "13") {//keyCode=13是回车键
+                    $('#btnLogin').click();
+                }
+            });
+            $("#password").focus(function () {
+                $("#pw_div").removeClass("on");
+                $("#pw_tsk").html("");
+            });
+            $("#user_name").focus(function () {
+                $("#un_div").removeClass("on");
+                $("#un_tsk").html("");
+            });
+            $('#user_name').on('blur', function () {
+                if ($(this).val()) {
+                    $('#un_tsk').html('');
+                }
+            });
+            $('#password').on('blur', function () {
+                if ($(this).val()) {
+                    $('#pw_tsk').html('');
+                }
+            });
+        });
+        /*
+            登陆操作
+        */
+        function login() {
+            $("#un_div").removeClass("on");
+            $("#pw_div").removeClass("on");
+            var userName = $("#user_name").val();
+            var password = $("#password").val();
+            var isExpire = $("input[name='zddl']").prop("checked") ? true : false;
+            if (userName == "") {
+                $("#un_div").addClass("on");
+                $("#un_tsk").css({ 'color': '#ff4700', 'margin-top': '5px' }).html("请输入登陆账户");
+                if (password == "") {
+                    $("#pw_div").addClass("on");
+                    $("#pw_tsk").css({ 'color': '#ff4700', 'margin-top': '5px' }).html("请输入密码");
+                }
+            }
+            else {
+                if (password == "") {
+                    $("#pw_div").addClass("on");
+                    $("#pw_tsk").css({ 'color': '#ff4700', 'margin-top': '5px' }).html("请输入密码");
+                }
+                else {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Account/LogOn",
+                        data: "userName=" + userName + "&password=" + $.md5(password) + "&isExpire=" + isExpire,
+                        dataType: "json",
+                        beforeSend: function () {
+                            $("#pw_tsk").css({ 'color': '#ff4700', 'margin-top': '5px' }).html("正在登陆处理，请稍候。。。");
+                        },
+                        success: function (response) {
+                            if (response.IsSuccess) {
+                                $("#pw_tsk").css({ 'color': '#ff4700', 'margin-top': '5px' }).html("登陆成功，正在跳转。。。");
+                                window.location.href = "/";
+                            }
+                            else {
+                                $("#pw_tsk").css({ 'color': '#ff4700', 'margin-top': '5px' }).html(response.Result);
+                            }
+                        }
+                    });
+                }
+            }
+        }
+    </script>
+    <script type="text/javaScript">
+    if (window != top)
+        top.location.href = location.href;
+    </script>
+</head>
+<body class="login">
+    <div id="backstretch" style="position:absolute; width:100%; height:100%; z-index:-999999">
+        <img src="~/images/500bg.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; z-index: -999999; height:100%; width:100%; left: 0px;" />
+    </div>
+    <div class="layout">
+        <div class="container">
+            <div class="section">
+                <a class="logo" style="margin-top:80px;">
+                </a>
+                <div class="loginbox">
+                    <ul class="login">
+                        <li class="login-head clearfix">
+                            <span class="tit">会员登录</span>
+                            @*<span class="no-account">没有账号？<a class="orange">立即注册</a></span>*@
+                        </li>
+                        <li>
+                            <div class="pr" id="un_div">
+                                <input type="text" name="user_name" id="user_name" value="" class="input" placeholder="登陆账户" tabindex="1" autocomplete="off">
+                                <div class="tsk" id="un_tsk"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pr" id="pw_div">
+                                <input type="password" name="password" id="password" class="input" placeholder="密码" tabindex="2" autocomplete="off">
+                                <div class="tsk" id="pw_tsk"></div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div id="cap_div">
+                                <input type="hidden" id="cap_zhi" value="taocz_cap">
+                            </div>
+                        </li>
+                        <li class="check-box clearfix">
+                            <input type="checkbox" name="zddl" id="zddl" tabindex="4" class="auto-login">
+                            <label for="auto-login">下次自动登录</label>
+                            <span class="forget">
+                                <a class="orange">忘记密码？</a>
+                            </span>
+                        </li>
+                        <li>
+                            <button id="btnLogin" type="submit" class="btn btn-login" tabindex="5" onclick="login();">登录</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.DataObjects\bin\Debug\Intelligent.Community.DataObjects.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.DataObjects\bin\Debug\Intelligent.Community.DataObjects.pdb
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.DataObjects\obj\Debug\Intelligent.Community.DataObjects.csprojResolveAssemblyReference.cache
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.DataObjects\obj\Debug\Intelligent.Community.DataObjects.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.DataObjects\obj\Debug\Intelligent.Community.DataObjects.pdb

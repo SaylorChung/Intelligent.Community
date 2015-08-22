@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "用户管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    /*
+        初始化
+    */
+    $(function () {
+        loadGrid();
+    });
+    /*
+        载入grid数据
+    */
+    function loadGrid() {
+        grid.url = apiPrefix + "api/system/getallemployee";
+        grid.columns = [[
+                { field: 'UserName', title: '用户名', width: $(this).width() * 0.2, align: 'center', sortable: true },
+                { field: 'RealName', title: '真实姓名', width: $(this).width() * 0.2, align: 'center' },
+                { field: 'Mobile', title: '手机号码', width: $(this).width() * 0.2, align: 'center', sortable: true },
+                { field: 'Email', title: '邮箱', width: $(this).width() * 0.2, align: 'center' },
+                { field: 'Status', title: '状态', width: $(this).width() * 0.2, align: 'center', sortable: true }
+        ]];
+        grid.queryParams = {
+            UserName: $('#UserName').val(),
+            RealName: $("#RealName").val(),
+            Mobile: $("#Mobile").val(),
+            Status: $("#Status option:selected").val()
+        };
+        grid.sortName = "UserName";
+        $('#grid').datagrid(grid);
+    }
+    /*
+        重置
+    */
+    function resetSearch() {
+        $("#search").find("input").each(function () {
+            $(this).val("");
+        });
+        $("#Status").val("-1");
+        loadGrid();
+    }
+    /*
+        删除数据
+    */
+    function Delete() {
+        win.Delete(apiPrefix + "api/system/deleteemployee");
+    }
+    /*
+        编辑数据
+    */
+    function Edit() {
+        win.Edit("编辑用户信息", "/Permission/EditEmployee", refresh, true);
+    }
+    /*
+        新增数据
+    */
+    function Add() {
+        win.Add("新增用户信息", "/Permission/EditEmployee", refresh, true);
+    }
+    /*
+        回掉函数
+    */
+    var refresh = function () { $('#grid').datagrid('reload'); }
+</script>
+<div class="row-fluid">
+    <div class="span12">
+        <div class="widget">
+            <div class="widget-title">
+                <h4><a href="javascript:;" class="fa fa-plus" onclick="Add();"><span>新增</span></a></h4>
+                <h4><a href="javascript:;" class="fa fa-minus" onclick="Delete();"><span>删除</span></a></h4>
+                <h4><a href="javascript:;" class="fa fa-pencil" onclick="Edit();"><span>编辑</span></a></h4>
+                <h4><a href="javascript:;" class="fa fa-refresh" onclick="loadGrid();"><span>刷新</span></a></h4>
+                <span class="tools">
+                    <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    <a href="javascript:;" class="fa fa-remove"></a>
+                </span>
+            </div>
+            <div class="widget-body">
+                <form class="form-horizontal search" id="search">
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="control-group">
+                                <label class="control-label">用户名称</label>
+                                <div class="controls">
+                                    <input type="text" id="UserName" class="input-large" />
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">手机号码</label>
+                                <div class="controls">
+                                    <input type="text" id="Mobile" class="input-large" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="control-group">
+                                <label class="control-label">真实姓名</label>
+                                <div class="controls">
+                                    <input type="text" id="RealName" class="input-large" />
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">状　　态</label>
+                                <div class="controls">
+                                    <select class="input-medium m-wrap" style="width:224px" tabindex="1" id="Status">
+                                        <option value="-1">请选择</option>
+                                        <option value="1">启用</option>
+                                        <option value="0">停用</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="control-group">
+                                <button class="btn btn-primary" type="button" onclick="loadGrid();">查询</button>
+                            </div>
+                            <div class="control-group">
+                                <button class="btn btn-primary" type="button" onclick="resetSearch();">重置</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="gridContainer">
+                    <table id="grid"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--弹窗区域-->
+    <div id="ContentWindow" style="overflow-y: hidden;"></div>
+</div>

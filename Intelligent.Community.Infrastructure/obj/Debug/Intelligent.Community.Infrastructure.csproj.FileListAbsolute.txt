@@ -1,0 +1,14 @@
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\bin\Debug\Intelligent.Community.Infrastructure.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\bin\Debug\Intelligent.Community.Infrastructure.pdb
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\bin\Debug\Castle.Core.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\bin\Debug\log4net.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\bin\Debug\StackExchange.Redis.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\bin\Debug\Castle.Core.xml
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\bin\Debug\log4net.xml
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\bin\Debug\StackExchange.Redis.pdb
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\bin\Debug\StackExchange.Redis.xml
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\obj\Debug\Intelligent.Community.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\obj\Debug\Intelligent.Community.Infrastructure.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Infrastructure\obj\Debug\Intelligent.Community.Infrastructure.pdb

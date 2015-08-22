@@ -1,0 +1,80 @@
+﻿@model Intelligent.Community.DataObjects.EmployeeDataObject
+@{
+    ViewBag.Title = "编辑用户信息";
+    Layout = "~/Views/Shared/_EditLayout.cshtml";
+}
+<script type="text/javascript">
+    $(function () {
+        $("#btnSave").click(function () {
+            var bool = $("#validate").validationEngine("validate");
+            var type = "PUT";
+            var url = "api/system/insertemployee";
+            if (bool) {
+                if ($("#ID").val() != "00000000-0000-0000-0000-000000000000") {
+                    //编辑
+                    type = "POST";
+                    url = "api/system/updateemployee"
+                }
+                $.ajax({
+                    type: type,
+                    url: apiPrefix + url,
+                    data:$("#validate").serializeArray(),
+                    dataType: "json",
+                    success: function (response) {
+                        CloseWin();
+                        messageBox.alert(response.Result);
+                    }
+                });
+            }
+        });
+    });
+</script>
+<form class="form-horizontal" id="validate">
+    <input type="hidden" id="ID" name="ID" value="@Model.ID" />
+    <input type="hidden" name="Password" value="@Model.Password" />
+    <table class="table">
+        <thead>
+            <tr>
+                <td>用户名称</td>
+                <td><input type="text" name="UserName" class="input-large validate[required,minSize[5],maxSize[12]]" value="@Model.UserName" /></td>
+                <td>真实姓名</td>
+                <td><input type="text" name="RealName" class="input-large validate[required,maxSize[20]]" value="@Model.RealName" /></td>
+                <td>状　　态</td>
+                <td>
+                    <select class="input-medium m-wrap" style="width:224px" tabindex="1" name="Status">
+                        @if (Model.Status == Intelligent.Community.DataObjects.StatusDataObject.Disabled)
+                        {
+                            <option value="1">启用</option>
+                            <option value="0" selected="selected">停用</option>
+                        }
+                        else
+                        {
+                            <option value="1" selected="selected">启用</option>
+                            <option value="0">停用</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>邮箱地址</td>
+                <td><input type="text" name="Email" class="input-large validate[custom[email],maxSize[100]]" value="@Model.Email" /></td>
+                <td>手机号码</td>
+                <td><input type="text" name="Mobile" class="input-large validate[custom[mobile],maxSize[11]]" value="@Model.Mobile" /></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>备　　注</td>
+                <td colspan="5"><textarea class="span7" style="height:80px;" name="Memo">@Model.Memo</textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="6" style="text-align:center;">
+                    <input type="button" class="btn btn-success" id="btnSave" value="保存" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>

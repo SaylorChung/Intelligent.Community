@@ -1,0 +1,85 @@
+﻿@charset "utf-8";
+/* CSS Document zyq v6.0 */
+body,td,th {color:#333;font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;}
+body, p, form, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6 { padding:0; margin:0; }
+.clear { font-size:0; width:0; height:0; clear:both; overflow:hidden;}
+img { border:0; }
+a { color:#333; text-decoration:none; }
+html a:hover { text-decoration:underline; color:#f33100; }
+a:focus { outline: none; }
+img { border:none; }
+ul, li { list-style:none; }
+body, html { width:100%; height:100%; }
+
+body {display: table;vertical-align: middle;background-size: cover;background-position: 50% 0;background-repeat: no-repeat;}
+body.login{background: url(../images/bg_login.jpg) no-repeat center 100% 100%;}
+h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
+input{padding: 0;border:none;margin: 0}
+.layout{display: table-cell;vertical-align: middle;}
+.container{width: 100%;background:rgba(236, 230, 230, 0.76);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccffffff,endColorstr=#ccffffff);box-shadow:1px 1px 1px rgba(0, 0, 0, 0.1);}
+.js_MASK{width:100%; height: 100%;position:fixed;top:0;left:0;z-index:1000;background:#000}
+.js_DIA{ display: none; position: fixed; z-index: 1001;top:-1020px;left:0;}
+.section{width: 1200px;margin:0 auto;padding:15px 0;}
+.logo{width: 283px;height: 152px;background:url(../images/logOn_logo.png) no-repeat scroll 0 0 transparent;float: left;margin-left: 150px}
+.loginbox{margin-top:5px;width: 266px;float: right;font-family: "Microsoft Yahei";}
+.login li,.pop-list li{margin-bottom: 10px;position: relative;}
+.login-head,.check-box,.third-party{line-height: 34px;color: #666}
+.login-head,.third-party{height:34px;}
+.login-head .tit{font-size: 20px}
+.login-head .no-account{float: right;padding-top: 10px;line-height: 18px;}
+.orange,.warning{color: #ff4700}
+.forget{float:right;}
+.input,.selected,.options-zone{border:1px solid #ddd;line-height: 24px;font-size: 14px;border-radius: 4px;background-color: #fff;
+    box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;transition:border 0.2s linear 0s, box-shadow 0.2s linear 0s;color:#666;}
+.input,.selected{width: 252px;height: 24px;padding: 4px 6px;}
+.options-zone{width:264px;position: absolute;top:33px;left: 0;z-index: 9;display: none}
+.tip{position: absolute;top:5px;left: 10px;height: 24px;line-height: 24px;color: #999;font-size: 14px;}
+.focus .tip{color:#ccc}
+.error{border-color: #ff4700;box-shadow:0 1px 1px rgba(255, 0, 0, 0.075) inset;}
+.pop-list .warning{padding-left:100px;}
+.code{width: 100px;float: left;}
+.code-images{width: 80px;height: 24px;padding: 5px 0 5px 15px;zoom:1;float: left;}
+.remember,.auto-login,.agree{vertical-align:middle;margin-bottom:2px;}
+.btn{height: 35px;line-height:35px;color: #fff;background-color:#ff4700;border:none;padding:0;cursor: pointer;font-size: 18px;border-radius: 4px;
+    font-family: "Microsoft Yahei";}
+.btn-login{width: 266px;}
+.btn-confirm,.btn-cancel{width: 146px;display: inline-block;}
+.btn-cancel{background-color: #ccc;margin-left: 32px;}
+.btn.hover,.get-code:hover{background-color: #f73500;}
+.btn-confirm:hover,.btn-cancel:hover,a.get-code,.get-code:hover{text-decoration: none;color: #fff}
+.btn-cancel:hover{background-color: #ccc;}
+.third-party a:hover{text-decoration: none;}
+.third-party .i{width:18px;height:18px;display:inline-block;vertical-align:middle;background: url(../images/index.png) no-repeat scroll 0 -225px transparent}
+.third-party .qq{margin-right: 10px}
+.third-party .weibo .i{background: url(../images/index.png) no-repeat scroll 0 -248px transparent}
+.mask{width: 100%; height: 100%; position: fixed; z-index: 99; top: 0px; left: 0px; overflow: hidden;opacity: 0.7; background: rgb(0, 0, 0);}
+.protocal{width: 600px;height:400px;padding: 6px 20px;border-radius: 10px;border:1px solid #ddd;background-color: #fff;
+    font-family: "Microsoft Yahei"; overflow: hidden;}
+    .protocal-cont{ width: 100%; height: 300px; overflow: hidden;}
+.protocal-head{ width: 100%; line-height: 66px;height: 60px;text-align: center;font-size: 22px;position: relative;}
+.pwbox{border-radius:10px;width: 500px;font-family: "Microsoft Yahei";background-color: #fff;z-index: 199;}
+.pwbox-head{line-height: 55px;height: 55px;position: relative;background-color: #F1F1F1;font-size: 20px;padding-left: 30px;color: #666;
+    border-bottom: 1px solid #ddd}
+.protocal-head .close,.pwbox-head .close{width: 40px;height: 40px;position: absolute;text-indent: -9999em;font-size: 12px;cursor: pointer;background:url(../images/index.png) no-repeat -1px -168px scroll transparent;}
+.protocal-head .close{top:14px;right: 0;}
+.pwbox-head .close{top:7px;right: 7px;}
+.protocal-cont h3{line-height: 28px;padding-top: 18px;font-size: 18px;color: #666}
+.protocal-cont p{line-height: 26px;font-size: 14px;color: #666;margin-bottom:10px;}
+.pwbox-cont{background: url(../images/pop_bg.png) repeat scroll 0 0;}
+.pwbox-cont .sorry{padding: 50px 0 38px 110px;}
+.pwbox-cont .sorry p{line-height: 38px;font-size: 18px;color: #666}
+.pwbox-cont .sorry .tel{color: #ff4700;font-size: 22px;padding: 0 5px;}
+.btn-zone{padding-bottom:30px;text-align: center;}
+.pop-list{padding:22px 0 10px 48px;}
+.pop-list li{width: 366px;}
+.pop-list .uname{line-height: 34px;font-size: 16px;color: #ff4700}
+.selection{width: 266px;float: right;position: relative; cursor: pointer}
+.cursor{border-top:10px solid #ddd;border-left:10px solid transparent;border-bottom:none;border-right:10px solid transparent;height: 0;width:0;
+    line-height: 0;position: absolute;right:12px;top:12px;cursor: pointer;}
+.selected{display: inline-block;}
+.options{display:block;cursor: pointer;padding: 4px 6px;height: 24px;line-height: 24px;font-size: 14px;}
+.txt{width: 100px;height: 34px;line-height: 34px;font-size: 16px;color: #999;display: inline-block;text-align: right;}
+.get-code{background-color:#ff4700;position: absolute;height: 24px;line-height:24px;width:100px;text-align:center;top:1px;right:0;border:1px solid #EF4814;border-left:none;padding: 4px 0;border-radius: 4px;}
+.clearfix:before,.clearfix:after,.section:before,.section:after{content: "";display: table;}
+.clearfix:after,.section:after{clear:both;}

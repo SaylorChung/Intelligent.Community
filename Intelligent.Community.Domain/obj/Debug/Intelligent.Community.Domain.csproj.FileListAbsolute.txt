@@ -1,0 +1,7 @@
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Domain\bin\Debug\Intelligent.Community.Domain.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Domain\bin\Debug\Intelligent.Community.Domain.pdb
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Domain\bin\Debug\Saylor.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Domain\bin\Debug\Saylor.pdb
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Domain\obj\Debug\Intelligent.Community.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Domain\obj\Debug\Intelligent.Community.Domain.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Intelligent.Community.Domain\obj\Debug\Intelligent.Community.Domain.pdb

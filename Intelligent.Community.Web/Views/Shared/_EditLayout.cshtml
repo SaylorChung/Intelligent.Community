@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/loading.js"></script>
+    <!--CSS start-->
+    <link href="~/Scripts/jquery-easyui/themes/metro/easyui.css" rel="stylesheet" />
+    <link href="~/Scripts/jquery-easyui/themes/icon.css" rel="stylesheet" />
+    <link href="~/Scripts/jquery-easyui/themes/color.css" rel="stylesheet" />
+    <link href="~/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/validationEngine.jquery.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <!--CSS end-->
+    <!--Scripts start-->
+    <script src="~/Scripts/jquery/jquery-1.11.3.min.js"></script>
+    <script src="~/Scripts/jquery-easyui/jquery.easyui.min.js"></script>
+    <script src="~/assets/scroll/jquery.nicescroll.js"></script>
+    <script src="~/Scripts/jquery-easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script src="~/Scripts/jquery-validationengine/jquery.validationEngine.js"></script>
+    <script src="~/Scripts/jquery-validationengine/languages/jquery.validationEngine-zh_CN.js"></script>
+    <script src="~/Scripts/global.js"></script>
+    <!--Scripts end-->
+    <title>@ViewBag.Title</title>
+</head>
+<body style="background-color:white;">
+    <div id="main-content">
+        <div class="widget-body">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

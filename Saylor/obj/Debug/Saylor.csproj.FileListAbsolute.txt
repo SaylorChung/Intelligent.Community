@@ -1,0 +1,5 @@
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor\bin\Debug\Saylor.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor\bin\Debug\Saylor.pdb
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor\obj\Debug\Saylor.csprojResolveAssemblyReference.cache
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor\obj\Debug\Saylor.dll
+C:\Users\Saylo\Documents\Visual Studio 2015\Projects\Intelligent.Community\Saylor\obj\Debug\Saylor.pdb
